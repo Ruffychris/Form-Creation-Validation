@@ -1,11 +1,11 @@
 // Ensure the script runs after the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
     // Select the form and feedback division
     const form = document.getElementById('registration-form');
     const feedbackDiv = document.getElementById('form-feedback');
 
     // Add submit event listener
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent form from submitting
 
         // Retrieve and trim input values
@@ -39,10 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
         feedbackDiv.style.display = "block";
         if (isValid) {
             feedbackDiv.textContent = "Registration successful!";
-            feedbackDiv.style.color = "#28a745"; // Green color
+            feedbackDiv.style.color = "#28a745"; 
         } else {
             feedbackDiv.innerHTML = messages.join("<br>");
-            feedbackDiv.style.color = "#dc3545"; // Red color
+            feedbackDiv.style.color = "#dc3545"; 
         }
     });
 });
