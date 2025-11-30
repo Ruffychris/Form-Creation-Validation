@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('registration-form');
     const feedbackDiv = document.getElementById('form-feedback');
 
-    // Add submit event listener to the form
+    // Add submit event listener
     form.addEventListener('submit', (event) => {
         event.preventDefault(); // Prevent form from submitting
 
